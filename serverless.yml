@@ -1,0 +1,25 @@
+service: fintrace-backend
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  app:
+    handler: handler.app
+    events:
+      - http:
+          path: transactions
+          method: post
+      - http:
+          path: transactions
+          method: get
+      - http:
+          path: events
+          method: post
+      - http:
+          path: events
+          method: get
+
+plugins:
+  - serverless-offline

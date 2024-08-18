@@ -1,0 +1,157 @@
+{
+  "/Users/anoragbhandarkar/Desktop/backend": {
+    "versionSfCore": null,
+    "versionFramework": "4.1.22",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "aws": {
+        "instance": {
+          "credentials": "<REDACTED>",
+          "serviceConfigFile": {
+            "service": "transaction-event-service",
+            "provider": {
+              "name": "aws",
+              "runtime": "nodejs18.x",
+              "stage": "dev",
+              "region": "us-east-1",
+              "versionFunctions": true
+            },
+            "functions": {
+              "app": {
+                "handler": "handler.app",
+                "events": [
+                  {
+                    "http": {
+                      "path": "transactions",
+                      "method": "post"
+                    }
+                  },
+                  {
+                    "http": {
+                      "path": "transactions",
+                      "method": "get"
+                    }
+                  },
+                  {
+                    "http": {
+                      "path": "events",
+                      "method": "post"
+                    }
+                  },
+                  {
+                    "http": {
+                      "path": "events",
+                      "method": "get"
+                    }
+                  }
+                ]
+              }
+            },
+            "plugins": [
+              "serverless-offline"
+            ]
+          },
+          "configFileDirPath": "/Users/anoragbhandarkar/Desktop/backend",
+          "config": {
+            "type": "aws"
+          },
+          "options": {
+            "template": "aws-nodejs",
+            "path": "fintrace-backend"
+          },
+          "stage": "dev",
+          "dashboard": null,
+          "isDefaultConfig": true
+        },
+        "resolvers": {}
+      }
+    },
+    "composeServiceName": null,
+    "servicePath": "/Users/anoragbhandarkar/Desktop/backend",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "transaction-event-service",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x",
+        "stage": "dev",
+        "region": "us-east-1",
+        "versionFunctions": true
+      },
+      "functions": {
+        "app": {
+          "handler": "handler.app",
+          "events": [
+            {
+              "http": {
+                "path": "transactions",
+                "method": "post"
+              }
+            },
+            {
+              "http": {
+                "path": "transactions",
+                "method": "get"
+              }
+            },
+            {
+              "http": {
+                "path": "events",
+                "method": "post"
+              }
+            },
+            {
+              "http": {
+                "path": "events",
+                "method": "get"
+              }
+            }
+          ]
+        }
+      },
+      "plugins": [
+        "serverless-offline"
+      ]
+    },
+    "serviceRawFile": "service: transaction-event-service\n\nprovider:\n  name: aws\n  runtime: nodejs18.x\n\nfunctions:\n  app:\n    handler: handler.app\n    events:\n      - http:\n          path: transactions\n          method: post\n      - http:\n          path: transactions\n          method: get\n      - http:\n          path: events\n          method: post\n      - http:\n          path: events\n          method: get\n          \nplugins:\n  - serverless-offline\n",
+    "command": [
+      "create"
+    ],
+    "options": {
+      "template": "aws-nodejs",
+      "path": "fintrace-backend"
+    },
+    "error": {
+      "message": "Serverless plugin \"serverless-offline\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.",
+      "stack": "ServerlessError2: Serverless plugin \"serverless-offline\" not found. Make sure it's installed and listed in the \"plugins\" section of your serverless config file. Use the --debug flag to learn more.\n    at PluginManager.resolveServicePlugins (file:///Users/anoragbhandarkar/.serverless/releases/4.1.22/package/dist/sf-core.js:879:2669)\n    at async PluginManager.loadAllPlugins (file:///Users/anoragbhandarkar/.serverless/releases/4.1.22/package/dist/sf-core.js:879:1293)\n    at async Serverless.init (file:///Users/anoragbhandarkar/.serverless/releases/4.1.22/package/dist/sf-core.js:886:9781)\n    at async runFramework (file:///Users/anoragbhandarkar/.serverless/releases/4.1.22/package/dist/sf-core.js:934:880)\n    at async route (file:///Users/anoragbhandarkar/.serverless/releases/4.1.22/package/dist/sf-core.js:945:16356)\n    at async Object.run2 [as run] (file:///Users/anoragbhandarkar/.serverless/releases/4.1.22/package/dist/sf-core.js:945:16754)\n    at async run3 (file:///Users/anoragbhandarkar/.serverless/releases/4.1.22/package/dist/sf-core.js:945:18014)",
+      "code": "PLUGIN_NOT_FOUND"
+    },
+    "params": {},
+    "machineId": "592770865610e2b5eecf74ba86ee6675",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "7d09f579-f5e9-49da-9b71-e01f28e2b611",
+    "orgName": "fintrace",
+    "userId": "nRp3jp6vczwJ7nwyy6",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": true,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "fintrace",
+    "subscription": null,
+    "userEmail": "ayushabhandarkar@gmail.com",
+    "versionSf": "4.1.22",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}
