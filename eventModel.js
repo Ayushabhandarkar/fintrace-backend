@@ -4,8 +4,8 @@ const { Schema } = mongoose;
 const eventSchema = new Schema(
   {
     description: String,
-    location: String,
     eventDate: { type: Date, default: Date.now },
+    location: String,
   },
   { timestamps: true }
 );
